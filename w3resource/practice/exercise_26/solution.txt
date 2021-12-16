@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(void)
+{
+  char *temp;
+  unsigned i, j;
+  size_t num = 10000;
+  unsigned long long sum = 0ULL;
+
+  temp = calloc(num, sizeof *temp);
+  for (i = 2; i < num; i++) {
+    if (!temp[i]) {
+      sum += i;
+      for (j = i*2; j < num; j += i) {
+        temp[j] = 1;
+      }
+    }
+  }
+  free(temp);
+  printf("%llu\n", sum);
+  return 0;
+}

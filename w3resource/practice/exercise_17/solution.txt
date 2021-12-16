@@ -1,0 +1,19 @@
+#include <stdio.h>
+int main(void)
+{
+  int sum3 = 0, sum7 = 0, sum21 = 0;
+  int i;
+  for (i = 0; i < 100; i++) {
+    if (i % 3 == 0) {
+      sum3 += i;
+    }
+    if (i % 7 == 0) {
+      sum7 += i;
+    }
+    if (i % 21 == 0) {
+      sum21 += i;
+    }
+  }
+  printf("%d\n", sum3 + sum7 - sum21);
+  return 0;
+}

@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct book{
+	char name[50];
+	int pages;
+	double price
+	char author;
+}
+
+int main(){
+	struct book cnba;
+	cnba.pages = 
+	return 0;
+}

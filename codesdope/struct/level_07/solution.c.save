@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+typedef struct Student{
+	char name[20];
+	int age;
+	int roll;
+} Student;
+
+
+Student *students;
+
+int main()
+{
+	int quantity;
+	printf("Input the students quantity : ");
+	scanf("%d", &quantity);
+	__fpurge(stdin);
+
+
+	
+	for (int i = 1; i<=quantity; i++)
+	{
+		
+
+		students = realloc()
+	}
+
+
+
+	free(students);
+	return 0;
+}
+
+
+void check_age(Student student);

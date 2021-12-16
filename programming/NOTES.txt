@@ -1,0 +1,120 @@
+#Basic Structure
+'''
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+	return 0;
+}
+'''
+
+
+#Variables 
+'''
+int var_1[] = 34 ; (%d) integer
+char var_2[] = "String"; (%s) string
+double var_3 = 3.4; (%f) decimal number
+'''
+
+
+#Functions
+'''
+pow()	power a number
+sqrt()	square root of a number
+ceil() round the number up
+floor() round the decimal number down
+'''
+
+
+#Comment 
+'''
+//
+/* This is a comment */
+'''
+
+
+#Constants
+'''
+const int var_1 = 5;
+printf("%d", var_1)
+'''
+
+
+#Get user input 
+'''
+char[] name;
+printf("Enter your name: \n")
+scanf("%s", name)
+/* fgets(name, 20, stdin)*/
+stdin => standard input
+'''
+
+
+#Conditionals
+'''
+if(condition>condition){
+	then;
+} else if(){
+	then;
+} else{}
+'''
+
+
+#Switch statement
+'''
+char grade = "A";
+switch(grade)
+case 'A':
+	printf("Great");
+	break;
+case "B":
+	printf("Alright");
+	break;
+case "C":
+	printf("F");
+	break;
+case "D":
+	printf("Stupid");
+	break;
+default:
+	printf("Invalid grade");
+'''
+
+
+#Structs
+'''
+struct book{
+
+	char name[50];
+	int pages;
+	double price;
+	char author;
+};
+
+int main(){
+	struct book CNBA;
+	CNBA.pages = 190;
+	strcpy(CNBA.name, "Aprendizaje");
+	strcpy(CNBA.author, "Sarmiento" );
+	cnba.price = 45.8;
+	printf("%s", CNBA.author);
+	return 0;
+}
+
+TIP: Struct termina con ;
+strcpy almacena string en una variable array (string = char array)
+'''
+
+
+#While loop
+'''
+while(True condition){
+	then, do stuff
+}
+'''
+
+
+#Memory Address pointers
+'''
+https://stackoverflow.com/questions/1143262/what-is-the-difference-between-const-int-const-int-const-and-int-const
+'''
