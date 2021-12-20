@@ -5,7 +5,7 @@ ________________________
 # Example
 
 
-##Input
+## Input
 
 
 First number: 10
@@ -15,7 +15,7 @@ Second number: 5
 
 
 
-##Output
+## Output
  
 
 Sum = 15
