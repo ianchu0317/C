@@ -30,8 +30,7 @@ int factorialNumber(int num)
     int factorial = 1;
     for (int i = 1; i <= num; i++){
         factorial *= i;
-    }
-       
+    }      
     return factorial;
 }
 
@@ -42,7 +41,7 @@ int checkStrongNumber(int num)
     int copyNum = num;
     
     while (copyNum != 0) {
-        sum += factorialNumber(copyNum / 10);
+        sum += factorialNumber(copyNum % 10);
         copyNum /= 10;
     }
     
