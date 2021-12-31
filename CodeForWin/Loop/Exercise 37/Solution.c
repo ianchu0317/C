@@ -13,7 +13,7 @@ int main()
     
     printf("Input binary number: ");
     fgets(binaryNumber, sizeof(binaryNumber), stdin);
-    //binaryNumber[strlen(binaryNumber) - 1] = '\0';
+    binaryNumber[strlen(binaryNumber)] = '\0';
 
     /* New complement number */
     char complementBinaryNumber[BINARY_SIZE];
