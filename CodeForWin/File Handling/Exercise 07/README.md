@@ -4,7 +4,6 @@
 Hurray!!! I learned to create file in C programming. I also learned to write contents to file. Next, I will learn to read contents from file on Codeforwin. Happy coding ;)
 
 # Contents of file2.txt
-
 Reading a file line by line.
 --------------------------------------------
 I love programming in C.
