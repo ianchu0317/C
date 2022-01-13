@@ -1,0 +1,1 @@
+# C program to find sum of two numbers using macroWrite a C program to add two numbers using macros. How to add two numbers using macros #define preprocessor directive in C program. Logic to add two numbers using macros.
