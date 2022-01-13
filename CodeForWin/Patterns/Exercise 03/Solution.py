@@ -5,10 +5,10 @@ def print_pattern(ROW, COLUMN):
         for x in range(COLUMN):
             # Print all first row and last row
             if i == 1 or i == ROW:
-                print("*")
+                print("*", end = '')
             # Print first and last star in middle columns
             elif x == 1 or x == COLUMN:
-                print("*")
+                print("*", end = '')
             else:
                 print(" ")
 
