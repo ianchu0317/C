@@ -16,9 +16,9 @@ int main()
       /* Print first and last row */
       if (i == 1 || i == ROW){
         printf("*");
-      } else if (x == 1 || x == COLUMN){
+      } else if (x == 1 || x == COLUMN || i == x || x == (ROW - i + 1)){
         printf("*"); /* Print the first and last column */
-      } else{
+      } else {
         printf(" ");
       }
     }
