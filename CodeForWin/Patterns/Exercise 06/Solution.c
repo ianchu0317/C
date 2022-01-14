@@ -11,9 +11,9 @@ int main(int argc, char *argv[]){
 
   /**** Print out result ****/
   /* Print rows */
-  for (int i = 1; i <= ROW - 1; i++){
+  for (int i = 0; i < ROW; i++){
     /* Print white space */
-    for (int x = i; x <= ROW; x++){
+    for (int x = ROW; x < ROW + i; x++){
       printf(" ");
     }
   /* Print stars */
