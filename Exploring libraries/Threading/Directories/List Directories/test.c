@@ -4,7 +4,7 @@
 
 int main()
 {
-    char path[] = "/usr/include";
+    char path[] = ".";
 
     DIR *d = opendir(path);
     struct dirent *dir;
