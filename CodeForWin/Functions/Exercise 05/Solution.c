@@ -11,6 +11,7 @@ int checkPrime(int n){
   }
 }
 
+
 int checkArmstrong(int n){
   /* Find number digits len */
   int tempNum = n;
@@ -36,13 +37,14 @@ int checkArmstrong(int n){
     return 0;
 }
 
-/* Check armstrong number */
+/* Check perfect number */
 int checkPerfect(int n){
   int sum = 0;
-  for (int i = 1; i < 6; i ++){
+  for (int i = 1; i <= n / 2; i ++){
     if (n % i == 0)
       sum += i;
   }
+
   if (sum == n)
     return 1;
   else
@@ -55,12 +57,14 @@ int main(){
   printf("Input any number: ");
   scanf("%d", &num);
 
+  /* Find if its prime, armstrong or perfect */
   int isPrime, isArmstrong, isPerfect;
 
   isPrime = checkPrime(num);
   isArmstrong = checkArmstrong(num);
   isPerfect = checkPerfect(num);
 
+  /* Print out result */
   if (isPrime)
     printf("\n%d is prime number\n", num);
   else
