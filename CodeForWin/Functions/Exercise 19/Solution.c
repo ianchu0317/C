@@ -2,13 +2,14 @@
 
 int recursive(int previous, int next, int count, int max){
   if (count == max)
-    return 0;
-  previous = next - previous;
-  return (next + previous) + recursive(next, next + previous, count + 1, max);
+    return previous + next;
+  printf("%d (previous) + %d (next)= %d (previous + next)\n", previous, next, next+previous);
+
+  return recursive(next, next + previous, count + 1, max);
 }
 
 int fibonacci(int num){
-  int min = 1;
+  int min = 2;
   return recursive(0, 1, min, num);
 }
 
