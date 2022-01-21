@@ -21,7 +21,7 @@ struct answers{
 // Functions
 void *find_armstrong_number(void *);
 void *find_perfect_number(void *);
-void *find_perfect_number(void *);
+void *find_strong_number(void *);
 void print_result(struct answers *);
 
 
@@ -68,7 +68,7 @@ int main(int argc, char *argv[]){
   printf("\nPerfect numbers between %lld to %lld are: ", args.min, args.max);
   print_result(perfect_numbers);
 
-  printf("\nArmstrong numbers between %lld to %lld are: ", args.min, args.max);
+  printf("\nStrong numbers between %lld to %lld are: ", args.min, args.max);
   print_result(strong_numbers);
   
 
@@ -134,7 +134,7 @@ void *find_armstrong_number(void *ptr){
 }
 
 // Function to find perfect number
-void *find_perfect_number(void * args){
+void *find_perfect_number(void * ptr){
   struct parameters *limits = (struct parameters *) ptr;
 
   struct answers *answer = (struct answers *) malloc(sizeof(struct answers));
@@ -163,7 +163,7 @@ void *find_perfect_number(void * args){
   pthread_exit(answer);
 }
 
-void *find_strong_number(void *args){
+void *find_strong_number(void *ptr){
   struct parameters *limits = (struct parameters *) ptr;
 
   struct answers *answer = (struct answers *) malloc(sizeof(struct answers));
