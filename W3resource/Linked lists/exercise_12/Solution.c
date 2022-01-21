@@ -9,8 +9,8 @@ struct node{
 };
 
 struct node *create_nodes(int);
-
-void print_node()
+void display_nodes(struct node *);
+void free_nodes(struct node *);
 
 int main(){
   // User input node number
@@ -20,6 +20,8 @@ int main(){
   __fpurge(stdin);
 
   struct node *tail = create_nodes(node_number);
+  display_nodes(tail);
+  free_nodes(tail);
 
   return 0;
 }
@@ -27,15 +29,17 @@ int main(){
 struct node *create_nodes(int node_number){
   struct node *head, *tmp, *tail;
 
+  // Create head node
   head = (struct node *) malloc(sizeof(struct node));
-  printf("Input data for node %d: ");
+  printf("Input data for node %d: ", 1);
   scanf("%d", &(head->data));
   __fpurge(stdin);
 
-  head = tmp;
+  tmp = head;
   tmp->previous = NULL;
   tmp->next = NULL;
 
+  // Create tail node and middle nodes
   for (int i = 2; i <= node_number; i++){
     tail = (struct node *) malloc(sizeof(struct node));
     printf("Input data for node %d: ", i);
@@ -46,12 +50,25 @@ struct node *create_nodes(int node_number){
     tmp->next = NULL;
   }
 
+  // Return tail pointer address
   return tail;
 }
 
-void free_nodes(struct node *head){
-  struct node *tmp = head;
-  while (tmp != NULL){
-    
+void display_nodes(struct node *tail){
+  int counter = 1;
+  while (tail != NULL){
+    printf("Data in node %d: %d\n", counter, tail->data);
+    tail = tail->previous;
+    counter += 1;
   }
+}
+// Free nodes
+void free_nodes(struct node *tail){
+  struct node *tmp = tail->previous;
+  while (tmp != NULL){
+    free(tail);
+    tail = tmp;
+    tmp = tmp->previous;
+  }
+  free(tail);
 }
