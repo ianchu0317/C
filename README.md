@@ -1,4 +1,4 @@
-# C
+# C Programming Exercises
 This repository contains my solutions for some C programming exercises that I've found on Internet. 
 
 Website list for the exercises:
