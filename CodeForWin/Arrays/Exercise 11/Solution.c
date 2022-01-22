@@ -32,7 +32,7 @@ int main(){
 
       }
       for (int x = 1; x <= i; x++){
-        if (frequency[x][0] == array[i-1]) break;
+        if (frequency[x-1][0] == array[i-1]) break;
         else if (frequency[x-1][0] != array[i-1] && x == i){
           frequency[found_num][0] = array[i-1];
           frequency[found_num][1] = freq_count;
