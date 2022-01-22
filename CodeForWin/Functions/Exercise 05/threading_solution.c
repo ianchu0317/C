@@ -157,9 +157,8 @@ void *find_perfect_number(void * ptr){
       answer->counter += 1;
       answer->result = realloc(answer->result, sizeof(long long) * answer->counter);
     }
-
   }
-  
+
   pthread_exit(answer);
 }
 
