@@ -11,12 +11,14 @@ int main(){
   printf("Enter %d elements in array:\n", number);
   for (int i = 1; i <= number; i++) scanf("%d", &array[i-1]);
 
+  int new_array[number];
+  int new_counter = 0;
   // For each element in current array
   for (int i = 1; i <= number; i++){
     // Check If its duplicated
     for (int x = 1; x <= number; x++){
         // If its the same item
-        if (array[i-1] == array[x-1]){
+        if (array[i-1] == array[x-1] && x != i){
           // Remove duplicated by shifting one element foward
           for (int j = x; j <= number; j++){
             array[j-1] = array[j];
